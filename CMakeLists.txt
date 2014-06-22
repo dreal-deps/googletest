@@ -262,7 +262,8 @@ endif()
 ################################################################
 # Install
 ################################################################
-install( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/include/gtest
+install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/include/gtest
    DESTINATION "include"
    PATTERN *.pump EXCLUDE
 )
+install (FILES ${CMAKE_CURRENT_BINARY_DIR}/libgtest.a DESTINATION "lib")
