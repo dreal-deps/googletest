@@ -258,3 +258,11 @@ if (gtest_build_tests)
   cxx_executable(gtest_xml_output_unittest_ test gtest)
   py_test(gtest_xml_output_unittest)
 endif()
+
+################################################################
+# Install
+################################################################
+install( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/include/gtest
+   DESTINATION "include"
+   PATTERN *.pump EXCLUDE
+)
